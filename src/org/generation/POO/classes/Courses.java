@@ -16,28 +16,32 @@ public class Courses {
 		this.year=year;
 	}//courses
 	
-	Courses art = new Courses("Art", "Bob", 1);
-	Courses bio = new Courses("Biology", "Martha", 2);
-	Courses chem = new Courses("Chemistry", "John", 2);
-	Courses phys = new Courses("Physics", "Jeimmy", 3);
-	Courses math = new Courses("Mathematics", "Frank", 3);
+
+	
+	   public void enroll(Student student){
+		      enrolledStudents.add(student);
+		   }
+
+		   public void unEnroll(Student student){
+			   enrolledStudents.remove(student);
+		   }
+
+		   public int countStudents(){
+			   int total = enrolledStudents.size();
+			   return total;
+		   }
+		   
+		   public int bestGrade(){
+		       //TODO implement
+		       return 0;
+		   }
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+		    public List<Student> getEnrolledStudents(){
+		        return enrolledStudents;
+		    }
  	public String toString() {
-		return "courseName=" + courseName + ", professorName=" + professorName + ", year=" + year + "Students enrolled= " + enrolledStudents;
+		return "courseName=" + courseName + ", professorName=" + professorName + ", year=" + year + ", Students enrolled= " + enrolledStudents;
 	}
 	
 }//class Courses
