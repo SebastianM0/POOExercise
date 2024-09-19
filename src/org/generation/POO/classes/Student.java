@@ -52,7 +52,11 @@ public class Student {
 		return year + " year";
      }//changeYearIfApproved
 
+     public int getGrade() {
+         return grade;
+     }//getGrade
+     
  	public String toString() {
-		return "firstName=" + firstName + ", lastName=" + lastName + ", registration=" + registration + ", grade=" + grade + ", year=" + year;
+		return "firstName=" + firstName + ", lastName=" + lastName + ", registration=" + registration + ", grade=" + grade + ", year=" + year + "||";
 	}//toString
 }//class Student

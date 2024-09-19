@@ -5,22 +5,30 @@ public class Main {
 		
 		Student Sebas= new Student("Sebastian", "Moran", 2811, 50, 1);
 		Student Emma= new Student("Emmanuel", "Aldama",2594, 60, 1);
-		Student Diego= new Student("Diego", "Ramirez", 0105,70,2);
-		Student Perla= new Student("Perla","Manterola", 7700, 80, 3);
+		Student Diego= new Student("Diego", "Ramirez", 0105,70,1);
+		Student Perla= new Student("Perla","Manterola", 7700, 80, 1);
+		Student[] studentsEnrolled = {Sebas,Emma,Diego,Perla};
+		
+		Courses math = new Courses("Mathematics", "Frank", 1);
+		
+		
+		
+		System.out.println("=====Info Student========");
 		System.out.println(Sebas);
 		
-		Courses art = new Courses("Art", "Bob", 1);
-		Courses bio = new Courses("Biology", "Martha", 2);
-		Courses chem = new Courses("Chemistry", "John", 2);
-		Courses phys = new Courses("Physics", "Jeimmy", 3);
-		Courses math = new Courses("Mathematics", "Frank", 3);
+////Aqui agregamos a 2 estudiantes a la clase de math 
+//		math.enroll(Sebas);
+//		math.enroll(Perla);
 		
-
-
+		//Ahora se agrega el arreglo de estudiantes
 		
-		math.enroll(Sebas);
+		math.enroll(studentsEnrolled);
+		System.out.println("======Count Students=======");
 		System.out.println(math.countStudents());
+		System.out.println("======Math Course=======");
 		System.out.println(math);
+		System.out.println("======Best Grade=======");
+		System.out.println(math.bestGrade());
 		
 		
 	}//main
